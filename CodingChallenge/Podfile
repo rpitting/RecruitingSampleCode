@@ -1,0 +1,14 @@
+platform :ios, '9.0'
+
+target 'CodingChallenge' do
+  use_frameworks!
+
+  pod 'JSONUtilities', '~> 3.1'
+  pod 'Alamofire', '~> 4.2'
+
+  target 'CodingChallengeTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
