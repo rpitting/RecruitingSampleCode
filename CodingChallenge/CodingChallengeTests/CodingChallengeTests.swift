@@ -22,7 +22,21 @@ class CodingChallengeTests: XCTestCase {
     }
     
     func testSampleData() {
+        let testBundle = Bundle(for: type(of: self))
+        do {
+           let testData = try Dictionary.from(filename: "TestData", bundle: testBundle)
+        } catch {
+            XCTFail("Could not load test data")
+
+        }
         
+        let model = NavigationModel(testData)
+        XCTAssert(model.sections.count == 1)
+        guard let firstSubection = model.sections.first else {
+            XCTFail("No subsection found")
+        }
+        XCTAssert(firstSubection.children.count == 1)
+        XCTAssert(firstSubection.children.first!.children.count == 2)
     }
     
 }

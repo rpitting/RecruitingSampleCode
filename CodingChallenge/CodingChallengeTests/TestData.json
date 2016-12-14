@@ -1,32 +1,23 @@
 {
-    "navigationEntries": [
-        {
-            "children": [
-                {
-                    "children": [
-                        {
-                            "children": [
-                                {
-                                    "label": "0-6 Monate",
-                                    "type": "link",
-                                    "url": "http://www.mytoys.de/0-6-months/"
-                                },
-                                {
-                                    "label": "7-12 Monate",
-                                    "type": "link",
-                                    "url": "http://www.mytoys.de/7-12-months/"
-                                }
-                            ],
-                            "label": "Baby & Kleinkind",
-                            "type": "node"
-                        }
-                    ],
-                    "label": "Alter",
-                    "type": "node"
-                }
-            ],
-            "label": "Sortiment",
-            "type": "section"
-        }
-    ]
+    "navigationEntries": [{
+        "type": "section",
+        "label": "Sortiment",
+        "children": [{
+            "type": "node",
+            "label": "Alter",
+            "children": [{
+                "type": "node",
+                "label": "Baby & Kleinkind",
+                "children": [{
+                    "type": "link",
+                    "label": "0-6 Monate",
+                    "url": "http:\/\/www.mytoys.de\/0-6-months\/"
+                }, {
+                    "type": "link",
+                    "label": "7-12 Monate",
+                    "url": "http:\/\/www.mytoys.de\/7-12-months\/"
+                }]
+            }]
+        }]
+    }]
 }
