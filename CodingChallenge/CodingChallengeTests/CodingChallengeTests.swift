@@ -7,6 +7,7 @@
 //
 
 import XCTest
+@testable import JSONUtilities
 @testable import CodingChallenge
 
 class CodingChallengeTests: XCTestCase {
@@ -23,20 +24,38 @@ class CodingChallengeTests: XCTestCase {
     
     func testSampleData() {
         let testBundle = Bundle(for: type(of: self))
+        
+        var rootEntries: [NavigationEntry] = []
         do {
-           let testData = try Dictionary.from(filename: "TestData", bundle: testBundle)
+            let testData: JSONDictionary = try Dictionary<String, Any>.from(filename: "TestData", bundle: testBundle)
+            rootEntries = try testData.json(atKeyPath: "navigationEntries")
         } catch {
-            XCTFail("Could not load test data")
-
+            XCTFail("Could not load or parse test data")
+            return
         }
         
-        let model = NavigationModel(testData)
-        XCTAssert(model.sections.count == 1)
-        guard let firstSubection = model.sections.first else {
-            XCTFail("No subsection found")
+        XCTAssert(rootEntries.count == 1)
+        guard let navigationRoot = rootEntries.first else {
+            XCTFail("Could not load test data or parse test data")
+            return
         }
-        XCTAssert(firstSubection.children.count == 1)
-        XCTAssert(firstSubection.children.first!.children.count == 2)
+        
+        guard let firstNode = navigationRoot.nodes.first else {
+            XCTFail("No subsection found")
+            return
+        }
+        XCTAssert(firstNode.label == "Alter")
+        XCTAssert(firstNode.nodes.count == 1)
+        XCTAssert(firstNode.nodes.count == firstNode.children.count)
+        
+        guard let leafSection = firstNode.nodes.first else {
+            XCTFail()
+            return
+        }
+        
+        XCTAssert(leafSection.label == "Baby & Kleinkind")
+        XCTAssert(leafSection.children.count == 2)
+        XCTAssert(leafSection.links.count == 2)
     }
     
 }
