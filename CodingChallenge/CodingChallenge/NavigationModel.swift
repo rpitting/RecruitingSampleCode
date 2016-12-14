@@ -39,6 +39,7 @@ class NavigationEntry : Entry, JSONObjectConvertible {
     }
     
     required init(jsonDictionary: JSONDictionary) throws {
+        
         self.label = jsonDictionary.json(atKeyPath: "label") ?? ""
         
         guard let rawChilds: [JSONDictionary] = jsonDictionary.json(atKeyPath: "children") else {
@@ -46,7 +47,11 @@ class NavigationEntry : Entry, JSONObjectConvertible {
             return
         }
         
-        self.children = rawChilds.flatMap({ (jsonDict) -> NavigationEntry? in
+        self.children = NavigationEntry.childrenFromJsonDicts(dicts: rawChilds)
+    }
+    
+    static func childrenFromJsonDicts(dicts: [JSONDictionary]) -> [Entry] {
+        return dicts.flatMap({ (jsonDict) -> NavigationEntry? in
             let type: String = jsonDict.json(atKeyPath: "type") ?? ""
             
             do {

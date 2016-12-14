@@ -15,6 +15,7 @@
 		5534B9DB1E017E64001D1129 /* CodingChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5534B9DA1E017E64001D1129 /* CodingChallengeTests.swift */; };
 		5534B9E61E017F8E001D1129 /* TestData.json in Resources */ = {isa = PBXBuildFile; fileRef = 5534B9E51E017F8E001D1129 /* TestData.json */; };
 		5534B9E81E0186A4001D1129 /* NavigationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5534B9E71E0186A4001D1129 /* NavigationModel.swift */; };
+		5534B9EA1E01A196001D1129 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5534B9E91E01A196001D1129 /* MenuViewController.swift */; };
 		56CA5BA8C1C652554E67C46C /* Pods_CodingChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E94D3A9042C767BF677A2F4B /* Pods_CodingChallengeTests.framework */; };
 		8C35E9FD6757FFC9B995C24C /* Pods_CodingChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E530F86D215E04452622658 /* Pods_CodingChallenge.framework */; };
 /* End PBXBuildFile section */
@@ -42,6 +43,7 @@
 		5534B9DC1E017E64001D1129 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5534B9E51E017F8E001D1129 /* TestData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TestData.json; sourceTree = "<group>"; };
 		5534B9E71E0186A4001D1129 /* NavigationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationModel.swift; sourceTree = "<group>"; };
+		5534B9E91E01A196001D1129 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		5CC933075F32C1297D0BB922 /* Pods-CodingChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodingChallenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-CodingChallenge/Pods-CodingChallenge.release.xcconfig"; sourceTree = "<group>"; };
 		5D95DE1B71A488D90EB13FCA /* Pods-CodingChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodingChallengeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CodingChallengeTests/Pods-CodingChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5E530F86D215E04452622658 /* Pods_CodingChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CodingChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,6 +111,7 @@
 				5534B9CE1E017E64001D1129 /* LaunchScreen.storyboard */,
 				5534B9D11E017E64001D1129 /* Info.plist */,
 				5534B9E71E0186A4001D1129 /* NavigationModel.swift */,
+				5534B9E91E01A196001D1129 /* MenuViewController.swift */,
 			);
 			path = CodingChallenge;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				5534B9C81E017E64001D1129 /* ViewController.swift in Sources */,
 				5534B9C61E017E64001D1129 /* AppDelegate.swift in Sources */,
 				5534B9E81E0186A4001D1129 /* NavigationModel.swift in Sources */,
+				5534B9EA1E01A196001D1129 /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
