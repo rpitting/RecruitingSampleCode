@@ -44,7 +44,7 @@ As you can see there are three types of **navigationEntries**:
 - **node**: represented in JSON as ```"type": "node" ```
 - **link**: represented in JSON as ```"type": "link" ```
 
-<img src="https://github.com/rpitting/RecruitingSampleCode/TabelViewCells.png" width="600" />
+<img src="https://github.com/rpitting/RecruitingSampleCode/blob/master/TabelViewCells.png" width="600" />
 
 Section and nodes can have children. Children is an array that can contain **section**, **node** and **link** entries.
 
@@ -70,7 +70,7 @@ If you touch inside a link the modalViewController should disappear and the WebV
 
 
 Please have a look at the following gif for a better understand of the functionality:
-<img src="https://github.com/rpitting/RecruitingSampleCode/myToysNavigation.gif" width="300" />
+<img src="https://github.com/rpitting/RecruitingSampleCode/blob/master/myToysNavigation.gif" width="300" />
 
  Or download the [myToys App](https://itunes.apple.com/de/app/mytoys-kindermode-und-spielzeug/id1133168701?mt=8) from the German App store.
 
